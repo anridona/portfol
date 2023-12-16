@@ -4,17 +4,18 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
-    height: 100vh;
     width: 100vw;
-    background-image: url(R.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow-x: hidden;
 }
 
 .header {
+    position: fixed;
+    z-index: 5;
     height: 10vh;
     width: 100vw;
     background: #005f004b;
@@ -53,22 +54,44 @@ body {
 .element:hover {
     color: #008000;
 }
-.section1{
-    height: 100vh;
+
+#section1,
+#section2,
+#section3,
+#section4 {
     width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.welcomewraper{
+
+#section1 {
+    background-image: url(R.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rapwrape {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-.wellcome {
     color: rgb(124, 2, 27);
-    font-size: 7rem; 
+    transform: translateY(-15vh);
+}
+
+.rapwrape h1 {
+    font-size: 7rem;
     font-family: 'Montserrat', sans-serif;
-   
+
+}
+
+.rapwrape h2 {
+    font-size: 5rem;
+}
+
+.rapwrape h3 {
+    font-size: 3rem;
 }
