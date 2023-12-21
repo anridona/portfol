@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -94,4 +95,39 @@ body {
 
 .rapwrape h3 {
     font-size: 3rem;
+}
+
+#section4 {
+    background: #02008071;
+}
+
+.wrapper {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper-text div h1 {
+    color:#FFF;
+    font-size: 5rem;
+
+}
+.wrapper-text div h2{
+    font-size: 2rem;
+}
+.wrapper form {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    resize: none;
+    border-radius: 10px;
 }
