@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -68,7 +69,13 @@ body {
 }
 
 #section1 {
-    background-image: url(R.jpg);
+    background-image: url(image/bg1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section2 {
+    background-image: url(image/bg2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,16 +104,25 @@ body {
     font-size: 3rem;
 }
 
-.section3-wrapper{
+.section3-wrapper {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
 }
 
-.skills{
+.container  {
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}   
+
+.skills {
     height: 250px;
     width: 300px;
     display: flex;
@@ -117,17 +133,21 @@ body {
     border-radius: 15px;
     font-size: 5rem;
     font-family: 'Lemon', serif;
+    flex-grow: 1;
 }
 
-.x1{
-    color:orange;
+.x1 {
+    color: orange;
 }
-.x2{
-    color:blue;
+
+.x2 {
+    color: blue;
 }
-.x3{
-    color:rgb(255, 238, 0);
+
+.x3 {
+    color: rgb(255, 238, 0);
 }
+
 #section4 {
     background: #02008071;
 }
@@ -140,13 +160,15 @@ body {
 }
 
 .wrapper-text div h1 {
-    color:#FFF;
+    color: #FFF;
     font-size: 5rem;
 
 }
-.wrapper-text div h2{
+
+.wrapper-text div h2 {
     font-size: 2rem;
 }
+
 .wrapper form {
     display: flex;
     justify-content: start;
