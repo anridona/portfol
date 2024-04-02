@@ -50,15 +50,24 @@ body {
     font-family: monospace;
     font-weight: 700;
     color: #FFF;
-    transition: 0.3s;
-}
-
-.element:hover {
-    color: #008000;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
 }
 
 .res {
     display: none;
+}
+
+.freeze {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(image/bg1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
 #section1,
@@ -72,39 +81,22 @@ body {
     align-items: center;
 }
 
-#section1 {
-    background-image: url(image/bg1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#section2 {
-    background-image: url(image/bg2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#section3 {
-    background-image: url(image/bg3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .rapwrape {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: rgb(124, 2, 27);
+    color: #7c021b;
     transform: translateY(-15vh);
+    background: #00000056;
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .rapwrape h1 {
-    font-size: 7rem;
+    font-size: 6rem;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 .rapwrape h2 {
@@ -112,7 +104,31 @@ body {
 }
 
 .rapwrape h3 {
-    font-size: 3rem;
+    font-size: 4rem;
+}
+
+.section2-wrapper {
+    width: min(100vw, 1960px);
+    height: max(100%, 400px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-text-container {
+    max-width: 60%;
+    text-align: center;
+    background: #00000056;
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.about-text {
+    font-size: 2rem;
+    font-size: clamp(10px, 10vw, 2rem);
+    font-family: monospace;
+    color: #FFF;
 }
 
 .section3-wrapper {
@@ -140,7 +156,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #008000;
+    background-color: #0080006b;
+    backdrop-filter: blur(10px);
     border-radius: 15px;
     font-size: 5rem;
     font-family: 'Lemon', serif;
@@ -160,7 +177,7 @@ body {
 }
 
 #section4 {
-    background: #02008071;
+    background: #00000c71;
 }
 
 .wrapper {
@@ -170,10 +187,18 @@ body {
     justify-content: space-around;
 }
 
-.wrapper-text div h1 {
-    color: #FFF;
-    font-size: 5rem;
+.wrapper-text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
 
+.wrapper-text div {
+    color: #FFF;
+}
+
+.wrapper-text div h1 {
+    font-size: 5rem;
 }
 
 .wrapper-text div h2 {
@@ -181,26 +206,94 @@ body {
 }
 
 .wrapper form {
+    width: 50%;
+    height: 100%;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
     gap: 5px
 }
 
 .input {
-    width: 100%;
     padding: 10px;
     border: none;
     resize: none;
     border-radius: 10px;
+    background: #00b61e5d;
+    backdrop-filter: blur(20px);
+    color: #FFF;
+    outline: transparent;
+    align-self: flex-start;
+    margin-left: 20%;
+}
+
+.input::placeholder {
+    color: #FFF;
+}
+
+.input-field {
+    width: 30%;
+}
+
+#textarea {
+    width: 50%;
+}
+
+.sumbit {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@media screen and (min-width:1024px) {
+    .element:hover {
+        background: #000;
+        color: #008000;
+    }
+
+    .sumbit:hover {
+        background: hsla(130, 100%, 60%, 0.365);
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .rapwrape h3 {
+        font-size: 3rem;
+        font-size: clamp(10px, 10vw, 3rem);
+    }
+
+    .rapwrape h2 {
+        font-size: 4rem;
+        font-size: clamp(10px, 10vw, 4rem);
+    }
+
+    .rapwrape h1 {
+        font-size: 5rem;
+        font-size: clamp(10px, 10vw, 5rem);
+    }
+
+    .about-text-container {
+        max-width: 90%;
+    }
+
+    .input-field {
+        width: 40%;
+    }
+
+    #textarea {
+        width: 60%;
+    }
+
+    .sumbit {
+        width: 20%;
+    }
 }
 
 @media screen and (max-width:768px) {
-.rapwrape h1{
-    font-size: 5rem;
-}
-    
+    .rapwrape h1 {
+        font-size: 5rem;
+    }
+
     .nav-bar {
         position: fixed;
         top: 0;
@@ -214,7 +307,7 @@ body {
         transition: 0.5s;
     }
 
-    .nav-bar.active{
+    .nav-bar.active {
         right: 0;
         transform: translateX(0);
 
@@ -241,10 +334,151 @@ body {
         position: absolute;
         top: 15px;
         right: 50px;
-
     }
 
     .menu {
         margin-right: 50px;
     }
+
+    .rapwrape h3 {
+        font-size: 3rem;
+        font-size: clamp(10px, 10vw, 3rem);
+    }
+
+    .rapwrape h2 {
+        font-size: 4rem;
+        font-size: clamp(10px, 10vw, 4rem);
+    }
+
+    .rapwrape h1 {
+        font-size: 5rem;
+        font-size: clamp(10px, 10vw, 5rem);
+    }
+
+    .about-text {
+        font-size: 1.5rem;
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper-text {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .wrapper form {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .input {
+        width: max(50%, 250px);
+        padding: 10px;
+        border: none;
+        resize: none;
+        border-radius: 10px;
+        background: #00b61e5d;
+        backdrop-filter: blur(20px);
+        color: #FFF;
+        outline: transparent;
+        align-self: center;
+        margin-left: 0;
+    }
+
+    #textarea {
+        width: max(50%, 250px);
+    }
+}
+
+@media screen and (max-width:567px) {
+    .logo {
+        margin-left: 30px;
+        font-size: 2rem;
+    }
+
+    .nav-bar {
+        width: 100%;
+    }
+
+    .list-container {
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    .close {
+        right: 30px;
+    }
+
+    .menu {
+        margin-right: 30px;
+        font-size: 1.5rem;
+    }
+
+    .rapwrape h3 {
+        font-size: 2rem;
+        font-size: clamp(10px, 10vw, 2rem);
+    }
+
+    .rapwrape h2 {
+        font-size: 2.2rem;
+        font-size: clamp(10px, 10vw, 2.2rem);
+    }
+
+    .rapwrape h1 {
+        font-size: 2.3rem;
+        font-size: clamp(10px, 10vw, 2.3rem);
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        gap: 0;
+    }
+
+    .skills {
+        height: 150px;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .skills i {
+        margin-left: 20px;
+    }
+
+    .skills span {
+        font-size: 3rem;
+        margin-right: 20px;
+    }
+
+    .wrapper-text div h1 {
+        font-size: 3rem;
+    }
+
+    .wrapper-text div h2 {
+        font-size: 1rem;
+    }
+
+    .wrapper form {
+        height: 400px;
+    }
+
+    #textarea {
+        height: 200px;
+    }
+
 }

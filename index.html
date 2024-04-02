@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="image/A.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Home</title>
 </head>
@@ -25,14 +26,28 @@
         </nav>
         <i class="fa-solid fa-bars res menu"></i>
     </header>
+
+    <section class="freeze"></section>
+
     <section id="section1">
         <div class="rapwrape">
-            <h3>welcome</h3>
-            <h2>my name is anri, </h2>
-            <h1>nice to meet you</h1>
+            <h3>Welcome</h3>
+            <h2>My name is Anri, </h2>
+            <h1>Nice to meet You</h1>
         </div>
     </section>
-    <section id="section2"></section>
+    <section id="section2">
+        <div class="section2-wrapper">
+            <div class="about-text-container">
+                <p class="about-text">👋 Hey there! Welcome to my portfolio! 🚀 As a budding Front End Developer with a
+                    year of experience under my belt, I'm passionate about crafting pixel-perfect designs with HTML,
+                    CSS, and JavaScript. 💻 From responsive layouts to interactive user interfaces, I strive to create
+                    engaging web experiences that captivate audiences. Let's collaborate to bring your digital vision to
+                    life! 🎨✨ #FrontEndMagic</p>
+            </div>
+        </div>
+
+    </section>
     <section id="section3">
         <div class="section3-wrapper">
             <div class="container">
@@ -50,15 +65,18 @@
                     <h2><i class="fa-solid fa-envelope" style="color: #2d5071;"></i>anri23@kopitnari.net</h2>
                 </div>
             </div>
-            <form action="">
-                <input type="text" class="input-field input" placeholder="Name">
-                <input type="email" class="input-field input" placeholder="Email">
-                <textarea name="" id="textarea" cols="30" class="input" rows="10"></textarea>
-                <input type="submit" class="sumbit input" value="send">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" class="input-field input" id="name-field" placeholder="Your Name" required>
+                <input type="email" name="Email" class="input-field input" id="email-field" placeholder="Your Email" required>
+                <textarea id="textarea" cols="30" name="Message" class="input" rows="10" placeholder="Your message"
+                    required></textarea>
+                <button type="submit" class="sumbit input" id="submit-button">Send</button>
             </form>
         </div>
     </section>
-<script src="script.js"></script>
+
+    <script src="contact.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
